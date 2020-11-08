@@ -1,5 +1,4 @@
 .player-container {
-	background-color: aqua;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -7,7 +6,6 @@
 	.time-control {
 		display: flex;
 		width: 50%;
-		background-color: red;
 		justify-content: space-between;
 		input {
 			width: 100%;
@@ -18,7 +16,6 @@
 		}
 	}
 	.play-control {
-		background-color: pink;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
