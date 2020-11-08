@@ -1,11 +1,11 @@
 import LibraryItem from "./LibraryItem";
 
-function Library({songs, currentSong, setCurrentSong, audioRef, setIsPlaying, libraryOpenStatus}) {
+function Library({songs, currentSong, setCurrentSong, audioRef, setIsPlaying, libraryOpenStatus, setLibraryOpenStatus}) {
   return (
     <div className={`library ${libraryOpenStatus ? "active-library" : ""}`}>
-      <h2>Playlist</h2>
+      <h2 className="playlist-header">Playlist</h2>
       <div className="library-list">
-        { songs.map(song => <LibraryItem key={song.id} song={song} currentSong = {currentSong} setCurrentSong={setCurrentSong} audioRef={audioRef} setIsPlaying={setIsPlaying}/>) }
+        { songs.map(song => <LibraryItem key={song.id} song={song} currentSong = {currentSong} setCurrentSong={setCurrentSong} audioRef={audioRef} setIsPlaying={setIsPlaying} libraryOpenStatus={libraryOpenStatus} setLibraryOpenStatus={setLibraryOpenStatus}/>) }
       </div>
     </div>
   )

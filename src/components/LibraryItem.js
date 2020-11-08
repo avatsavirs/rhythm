@@ -1,8 +1,9 @@
-function LibraryItem({song, currentSong, setCurrentSong, audioRef, setIsPlaying}) {
+function LibraryItem({song, currentSong, setCurrentSong, audioRef, setIsPlaying, libraryOpenStatus, setLibraryOpenStatus}) {
   async function songSelectHandler() {
     await setCurrentSong(song);
     audioRef.current.play();
     setIsPlaying(true);
+    setLibraryOpenStatus(!libraryOpenStatus);
   }
   return (
     <div className={`library-item ${song===currentSong ? "selected" : ""}`} onClick={songSelectHandler}>

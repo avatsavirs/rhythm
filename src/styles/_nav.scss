@@ -18,3 +18,11 @@
 		}
 	}
 }
+
+@media screen and (max-width: 786px) {
+	.navbar {
+		button {
+			z-index: 10;
+		}
+	}
+}
